@@ -1,0 +1,9 @@
+google-api-python-client
+pandas
+matplotlib
+seaborn
+jupyter
+streamlit
+scikit-learn
+textblob
+python-dotenv
