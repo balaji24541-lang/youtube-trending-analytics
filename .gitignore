@@ -18,8 +18,8 @@ config.py
 
 # Data and Outputs (ignore large files or raw data)
 data/*.csv
-outputs/
 
 # OS generated files
 .DS_Store
 Thumbs.db
+
