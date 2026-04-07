@@ -10,7 +10,6 @@ This project deeply explores YouTube's trending videos using the YouTube Data AP
 We performed data collection, exploratory data analysis, and predictive modeling (using Random Forest) to figure out which features contribute most to high engagement rates.
 """)
 
-@st.cache_data
 def load_data():
     data_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data', 'trending_videos_us.csv')
     if not os.path.exists(data_path):
@@ -41,25 +40,25 @@ else:
         st.subheader("Distribution of View Counts")
         img_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'outputs', 'views_distribution.png')
         if os.path.exists(img_path):
-            st.image(img_path, use_container_width=True)
+            st.image(img_path, width='stretch')
             
     with col_b:
         st.subheader("Correlation between Metrics")
         img_path2 = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'outputs', 'correlation_matrix.png')
         if os.path.exists(img_path2):
-            st.image(img_path2, use_container_width=True)
+            st.image(img_path2, width='stretch')
             
     st.subheader("Top Channels by Trending Views")
     img_path3 = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'outputs', 'top_channels_views.png')
     if os.path.exists(img_path3):
-        st.image(img_path3, use_container_width=True)
+        st.image(img_path3, width='stretch')
 
     st.header("3. Advanced Modeling (Random Forest)")
     st.markdown("We trained a Random Forest regressor on NLP sentiment and metadata to predict the video's engagement ratio (Likes + Comments / Views). Below is the Feature Importance graph.")
     
     img_path4 = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'outputs', 'feature_importance.png')
     if os.path.exists(img_path4):
-        st.image(img_path4, use_container_width=True)
+        st.image(img_path4, width='stretch')
         
     st.header("Raw Data Sample")
-    st.dataframe(df.head(10), use_container_width=True)
+    st.dataframe(df.head(10), width='stretch')
