@@ -1,0 +1,43 @@
+{
+    "best_upload": {
+        "title": "Optimal Upload Window",
+        "description": "The algorithm favors videos published on Sundays around 21:00 UTC. Videos published during peak hours have a significantly higher initial velocity (`views_per_hour`), pushing them onto the Trending page faster."
+    },
+    "top_category": {
+        "title": "Highest Engagement Category",
+        "description": "The 'Comedy' category generates the highest median engagement rate. While other categories might pull more raw views, 'Comedy' creates stronger community interaction (Likes & Comments per view), signaling strong audience retention."
+    },
+    "clickbait_metrics": {
+        "title": "Clickbait Liability",
+        "description": "Identified 0 videos that exhibit 'clickbait' behavior\u2014massive reach (top 25% views) but extremely poor community reception (bottom 25% engagement). Creators should avoid this to protect channel reputation over long horizons."
+    },
+    "velocity_importance": {
+        "title": "Velocity is King",
+        "description": "There is a positive correlation (0.46) between how fast a video gets views (`views_per_hour`) and its overall engagement. Pushing initial traffic from external sources in the first hour mathematically improves trending probability."
+    },
+    "ml_metrics": {
+        "Random_Forest": {
+            "Accuracy": 0.717948717948718,
+            "Precision": 0.42857142857142855,
+            "Recall": 0.3,
+            "F1_Score": 0.35294117647058826,
+            "ROC_AUC": 0.7379310344827585
+        },
+        "Logistic_Regression": {
+            "Accuracy": 0.5641025641025641,
+            "Precision": 0.23076923076923078,
+            "Recall": 0.3,
+            "F1_Score": 0.2608695652173913,
+            "ROC_AUC": 0.6758620689655173
+        }
+    },
+    "model_interpretation": {
+        "title": "What Drives Viral Engagement?",
+        "description": "Our Random Forest model isolated the top predictive signals for High Engagement videos. The top 3 predictors are: 1) `views_per_hour` 2) `tags_count` 3) `hours_to_trend`. This means that video velocity and metadata length strongly predict if an audience will interact heavily.",
+        "top_features": [
+            "views_per_hour",
+            "tags_count",
+            "hours_to_trend"
+        ]
+    }
+}
